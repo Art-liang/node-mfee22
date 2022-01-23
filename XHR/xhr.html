@@ -27,12 +27,9 @@
         };
         // open(method, url, async = true)
         // async 是 true => 表示是要用非同步的方式進行
-      
-      
         xhr.open("GET", "http://34.221.173.92:3000/", true);
         xhr.send();
       });
-
 
       var syncBtn = document.getElementById("syncBtn");
       syncBtn.addEventListener("click", function () {
