@@ -1,11 +1,30 @@
 const axios = require("axios");
+
 (async () => {
   try {
-    let data = await axios.get(
-      "https://www.twse.com.tw/exchangeReport/STOCK_DAY?response=json&date=20220109&stockNo=2330&_=1641716316315"
+    // 根據變數去抓取資料
+    let stockNo = 2330;
+    let queryDate = "20220115";
+
+    // let response = await axios.get(
+    //   `https://www.twse.com.tw/exchangeReport/STOCK_DAY?response=json&date=${queryDate}&stockNo=${stockNo}`
+    // );
+
+    let response = await axios.get(
+      "https://www.twse.com.tw/exchangeReport/STOCK_DAY",
+      {
+        // 這裡可以放一些設定
+        // params: 放 query string 的參數
+        params: {
+          response: "json",
+          date: queryDate,
+          stockNo,
+        },
+      }
     );
-    console.log(data);
-  } catch (err) {
-    console.error(err);
+
+    console.log(response.data);
+  } catch (e) {
+    console.error(e);
   }
 })();

@@ -1,5 +1,3 @@
-//azole 爬蟲: promise.all 版本
-
 const axios = require("axios");
 const { readFile } = require("fs/promises");
 const moment = require("moment");

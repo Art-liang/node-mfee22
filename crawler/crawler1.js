@@ -12,7 +12,3 @@ axios
     // handle error
     console.log(error);
   });
-© 2022 GitHub, Inc.
-Terms
-Privacy
-Security

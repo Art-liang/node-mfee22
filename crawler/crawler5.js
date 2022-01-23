@@ -2,6 +2,7 @@ const axios = require("axios");
 const { readFile } = require("fs/promises");
 const moment = require("moment");
 const mysql = require("mysql2");
+require("dotenv").config();
 
 (async () => {
   let connection = mysql.createConnection({
